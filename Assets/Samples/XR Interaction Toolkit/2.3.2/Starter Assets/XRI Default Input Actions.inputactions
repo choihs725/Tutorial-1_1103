@@ -639,6 +639,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "exit",
+                    "type": "Button",
+                    "id": "d6238e8c-4477-45ae-96f1-533c7cd8fcb5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -771,6 +780,17 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "Generic XR Controller",
                     "action": "Translate Anchor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "60bb885a-4940-404e-a8b5-2a8cfa941e26",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "exit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1335,6 +1355,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "exit",
+                    "type": "Button",
+                    "id": "f2adfd1e-32ea-4259-8c31-0df444db1757",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1467,6 +1496,17 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "Generic XR Controller",
                     "action": "Translate Anchor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c12aa20d-fd0b-4ba1-ba4b-2f72447b2ddf",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "exit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
