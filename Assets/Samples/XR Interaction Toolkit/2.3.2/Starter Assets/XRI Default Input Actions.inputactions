@@ -648,6 +648,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "brake",
+                    "type": "Button",
+                    "id": "e17e21c7-a3e4-4918-aed9-a6d429cc13cf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -791,6 +800,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "exit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a90c60cb-76a6-4faa-b448-14426ddd5cc8",
+                    "path": "<ValveIndexController>{LeftHand}/primaryButton",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "brake",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
