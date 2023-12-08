@@ -8,7 +8,7 @@ public class ChangetoHTR : MonoBehaviour
     // Start is called before the first frame update
     public void ScenceChange()
     {
-        SceneManager.LoadScene("Manual Scene");
+        SceneManager.LoadScene("Manual_Scene");
     }
 
     // Update is called once per frame

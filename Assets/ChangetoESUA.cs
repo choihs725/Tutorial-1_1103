@@ -8,7 +8,7 @@ public class ChangetoESUA : MonoBehaviour
     // Start is called before the first frame update
     public void ScenceChange()
     {
-        SceneManager.LoadScene("Experience SUA");
+        SceneManager.LoadScene("Experience_SUA");
     }
 
     // Update is called once per frame
