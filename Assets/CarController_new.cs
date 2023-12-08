@@ -52,7 +52,10 @@ public class CarController_new : MonoBehaviour
         }
 
         // 가속도 적용
-        currentSpeed += acceleration * Time.deltaTime * (lever.value ? 0 : 1);
+        //currentSpeed += acceleration * Time.deltaTime * (lever.value ? 0 : 1);
+
+        //기어없는 가속도 적용
+        currentSpeed += acceleration * Time.deltaTime;
 
         // 전진 이동
         transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
