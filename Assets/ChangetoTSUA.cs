@@ -9,7 +9,7 @@ public class ChangetoTSUA : MonoBehaviour
     public void ScenceChange()
     {
         //SceneManager.LoadScene("Sample_Scene");
-        SceneManager.LoadScene("Experience_SUA");
+        SceneManager.LoadScene("Experience_SUA1");
     }
 
     // Update is called once per frame

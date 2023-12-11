@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 using UnityEditor;
 
@@ -19,3 +20,4 @@ public class CylinderCollderEditor : Editor
         }
     }
 }
+*/
