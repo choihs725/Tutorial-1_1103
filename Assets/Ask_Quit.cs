@@ -145,7 +145,7 @@ public class Ask_Quit : MonoBehaviour
         // 버튼이 눌렸을 때 로그를 출력
         if (val)
         {
-            Debug.Log("Left Brake activated");
+            Debug.Log("Exit activated");
             uiPanel.SetActive(val);
         }
     }
