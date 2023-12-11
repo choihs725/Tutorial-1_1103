@@ -57,6 +57,10 @@ public class CarController_new : MonoBehaviour
     {
         if (sceneName == "Experience_SUA" || sceneName == "Experience_SUA1")
         {
+            if(sceneName == "Experience_SUA")
+            {
+                acceleration = 2.0f;
+            }
             float turnInput = knob.value;
             float turnAngle = Mathf.Lerp(-1.0f, 1.0f, turnInput) * turnSpeed * Time.deltaTime;
 
@@ -293,13 +297,16 @@ public class CarController_new : MonoBehaviour
         }
         else
         {
+            acceleration = 0.05f;
+            brakeForce = 0.05f;
+            sidebrakeForce = 0.1f;
             float turnInput = knob.value;
             float turnAngle = Mathf.Lerp(-1.0f, 1.0f, turnInput) * turnSpeed * Time.deltaTime;
 
             turnAngle = Mathf.Clamp(turnAngle, -90.0f, 90.0f);
 
             // 새로운 회전을 적용
-            //transform.Rotate(Vector3.up, turnAngle);
+            transform.Rotate(Vector3.up, turnAngle);
 
             // Check if both A and X buttons are pressed
             /*if (CheckBrakeInput())
@@ -320,9 +327,9 @@ public class CarController_new : MonoBehaviour
 
             if (currentSpeed > 0)
             {
-                float desiredVolume = Mathf.Lerp(0.0f, maxVolume, currentSpeed / 10.0f);
-                float desiredBrakeVolume = Mathf.Lerp(0.0f, 1.0f, currentSpeed / 10.0f);
-                float desiredSideBrakeVolume = Mathf.Lerp(2.0f, 0.0f, currentSpeed / 10.0f);
+                float desiredVolume = Mathf.Lerp(0.0f, maxVolume, currentSpeed / 1.0f);
+                float desiredBrakeVolume = Mathf.Lerp(0.0f, 1.0f, currentSpeed / 1.0f);
+                float desiredSideBrakeVolume = Mathf.Lerp(2.0f, 0.0f, currentSpeed / 1.0f);
                 if (!lever.value) // 기어가 D에 있을 때
                 {
                     /*
@@ -512,7 +519,7 @@ public class CarController_new : MonoBehaviour
                     audioSource.Stop();
                 }
             }
-            /*
+            
             // 가속도 적용
             currentSpeed += acceleration * Time.deltaTime * (lever.value ? 0 : 1);
             // 사이드브레이크 적용
@@ -525,7 +532,7 @@ public class CarController_new : MonoBehaviour
             // 핸들 돌린 각도만큼 차량을 회전시킴
             float rotationAmount = turnInput * turnSpeed * Time.deltaTime;
             transform.Rotate(Vector3.up, rotationAmount);
-            */
+            
         }
     }
     
