@@ -55,7 +55,7 @@ public class CarController_new : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (sceneName == "Sample_Scene")
+        if (sceneName == "Experience_SUA" || sceneName == "Experience_SUA1")
         {
             float turnInput = knob.value;
             float turnAngle = Mathf.Lerp(-1.0f, 1.0f, turnInput) * turnSpeed * Time.deltaTime;
@@ -169,7 +169,7 @@ public class CarController_new : MonoBehaviour
                             }
                             //audioSource.clip = brakeSound;
 
-                            audioSource.volume = desiredBrakeVolume;
+                            audioSource.volume = desiredSideBrakeVolume;
 
                             if (!audioSource.isPlaying)
                             {
@@ -268,7 +268,7 @@ public class CarController_new : MonoBehaviour
                 }
             }
         }*/
-            else
+            else // 속도가 0 이하이면 멈추도록 설정
             {
                 currentSpeed = 0.0f;
                 if (audioSource.isPlaying)
@@ -405,7 +405,7 @@ public class CarController_new : MonoBehaviour
                             }
                             //audioSource.clip = brakeSound;
 
-                            audioSource.volume = desiredBrakeVolume;
+                            audioSource.volume = desiredSideBrakeVolume;
 
                             if (!audioSource.isPlaying)
                             {
@@ -504,7 +504,7 @@ public class CarController_new : MonoBehaviour
                 }
             }
         }*/
-            else
+            else // 속도가 0 이하이면 멈추도록 설정
             {
                 currentSpeed = 0.0f;
                 if (audioSource.isPlaying)
@@ -526,7 +526,6 @@ public class CarController_new : MonoBehaviour
             float rotationAmount = turnInput * turnSpeed * Time.deltaTime;
             transform.Rotate(Vector3.up, rotationAmount);
             */
-
         }
     }
     
